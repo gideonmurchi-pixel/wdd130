@@ -1,67 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iris - Gideon</title>
+  <link rel="stylesheet" href="styles/style.css" />
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="wwr/index.html">White Water Rafting Site</a>
-            <a href="wwr/site-plan-rafting.html">White Water Rafting Siteplan</a>
-            <a href="positioning.html">Positioning Activity</a>
-            <a href="#">Personal Website</a>
-            <a href="#">Personal Siteplan</a>
-            <a href="ice/index.html">ICE</a>
-            <a href="aboutme.html">About Me</a>
-        </nav>
-    <header>
-    <main>
+  <header class="site-header">
+    <nav class="top-nav" aria-label="Primary">
+      
+      <a class="nav-logo" href="index.html" aria-label="Home">
+        <img src="images/Iris_logo.png" alt="Iris logo" width="300px" />
+      </a>
 
-        <section id="blue">
+    
+      <ul class="nav-links">
+        <li><a href="wwr/index.html">White Water Rafting Site</a></li>
+        <li class="nav-divider" aria-hidden="true">|</li>
 
-            <h2>Cool Content</h2>
-            <img src="images/GideonRachel.jpeg" alt="sample image">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat saepe minus, dolorem, ratione libero tempora odit atque architecto doloremque iusto unde sed similique qui totam nulla nihil temporibus velit est.</p>
+        <li><a href="wwr/site-plan-rafting.html">White Water Rafting Siteplan</a></li>
+        <li class="nav-divider" aria-hidden="true">|</li>
 
-        </section>
-        <section id="green">
+        <li><a href="positioning.html">Positioning Activity</a></li>
+        <li class="nav-divider" aria-hidden="true">|</li>
 
-            <h2>Cool Content</h2>
-            <img src="https://picsum.photos/500" alt="sample image">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat saepe minus, dolorem, ratione libero tempora odit atque architecto doloremque iusto unde sed similique qui totam nulla nihil temporibus velit est.</p>
+        <li><a href="index.html" aria-current="page">Personal Website</a></li>
+        <li class="nav-divider" aria-hidden="true">|</li>
 
-        </section>
-        <section id="red">
+        <li><a href="siteplan.html">Personal Siteplan</a></li>
+        <li class="nav-divider" aria-hidden="true">|</li>
 
-            <h2>Cool Content</h2>
-            <img src="https://picsum.photos/500" alt="sample image">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat saepe minus, dolorem, ratione libero tempora odit atque architecto doloremque iusto unde sed similique qui totam nulla nihil temporibus velit est.</p>
+        <li><a href="ice/index.html">ICE</a></li>
+        <li class="nav-divider" aria-hidden="true">|</li>
 
-        </section>
+        <li><a href="aboutme.html">About Me</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <section id="about">
-            <h2>
-                Gideon Murchison Portal Page
-            </h2>
-        <img src="images/Me.jpeg" alt="Gideon photo" width="300">
+  <main>
+    
+    <section class="hero" id="hero">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <h1 class="hero-title">Iris - Gideon</h1>
 
-        <p>
-            This is my portal page. I am a student at BYU-Idaho.
+          <p class="hero-text">
+            Iris is my favorite word, and the name of this project. I'd like to use this as an
+            opportunity to present meaningful things about myself.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#explore">Button</a>
+            <a class="btn btn-outline" href="aboutme.html">Button</a>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <img
+            src="images/Me.jpeg" alt="Photo of Gideon" width="400px"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="explore" id="explore">
+      <div class="explore-inner">
+        <h2 class="explore-title">Explore</h2>
+
+        <p class="explore-subtitle">
+          What do you want to know? My journal from December 2024 - , personal music playlist,
+          photos, projects, people. Anything meaningful to me I'll put here!
         </p>
-        <p>
-            I'm 22 
-        </p>
 
+        <div class="explore-row">          
+          <div class="explore-items" role="list">
+            <a class="explore-card" href="journal.html" role="listitem">
+              <div class="explore-icon" aria-hidden="true"></div>
+              <h3 class="explore-label">Journal</h3>
+              <div class="explore-lines" aria-hidden="true">
+              </div>
+            </a>
 
-        </section>
+            <a class="explore-card" href="playlists.html" role="listitem">
+              <div class="explore-icon" aria-hidden="true"></div>
+              <h3 class="explore-label">Playlists</h3>
+              <div class="explore-lines" aria-hidden="true">
+              </div>
+            </a>
 
-    </main>
-    <footer>
+            <a class="explore-card" href="photos.html" role="listitem">
+              <div class="explore-icon" aria-hidden="true"></div>
+              <h3 class="explore-label">Photos</h3>
+              <div class="explore-lines" aria-hidden="true">
+              </div>
+            </a>
+          </div>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    </footer>
+  <footer class="site-footer">
+    
+  </footer>
 </body>
 </html>
+
