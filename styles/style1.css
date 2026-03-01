@@ -286,6 +286,59 @@ main {
   border-color: rgba(255,255,255,0.4);
 }
 
+.contact-form{
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #1b1f26;
+    border-radius: 18px;
+    border: 2px solid #3a3f46;
+}
+
+.contact-form h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* labels */
+.contact-form label{
+    display:block;
+    margin-top:12px;
+    font-size:14px;
+}
+
+/* inputs */
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+    border-radius:8px;
+    border:1px solid #444;
+    background:#111;
+    color:white;
+}
+
+/* textarea size */
+.contact-form textarea{
+    height:90px;
+}
+
+/* button */
+.contact-form input[type="submit"]{
+    margin-top:15px;
+    background:#3a86ff;
+    border:none;
+    padding:10px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.contact-form input[type="submit"]:hover{
+    background:#2f6fd6;
+}
+
 /* --- Responsive --- */
 @media (max-width: 900px) {
   .hero-inner {
