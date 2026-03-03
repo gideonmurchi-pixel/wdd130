@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Feed Sign Up</title>
+
+    <style>
+        * { box-sizing: border-box; margin: 0; }
+
+        body{
+        background: rgb(120, 96, 64);
+        font-family: Georgia, "Times New Roman", serif;
+        padding: 40px 0;
+        }
+
+        /* The blue rounded “modal card” */
+        #formContainer{
+        width: min(720px, 92vw);
+        margin: 0 auto;
+        border: 10px solid #123a8f;
+        border-radius: 26px;
+        overflow: hidden;            /* makes the hero image match rounded corners */
+        background: #fff;
+        position: relative;
+        }
+
+        /* Top image header */
+        .hero{
+        height: 210px;
+        background-image: url("images/jesus_feeds_5000.jpeg"); /* <-- change this */
+        background-size: cover;
+        background-position: center 20%;
+        position: relative;
+        }
+
+        .hero::after{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.18); /* slightly darkens image so text pops */
+        }
+
+        .hero h1{
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-content: center;
+        text-align: center;
+        color: #fff;
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 700;
+        text-shadow: 0 3px 8px rgba(0,0,0,0.6);
+        z-index: 1;
+        }
+
+        .hero h1 span{
+        display: block;
+        font-size: 0.8em;
+        font-weight: 700;
+        }
+
+        /* Form title */
+        #formContainer > h3{
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: 700;
+        padding: 26px 20px 8px;
+        }
+
+        /* Form layout */
+        #myForm{
+        
+        padding: 10px 60px 30px;
+        }
+
+        /* Close button top-left like screenshot */
+        #closeBtn{
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        width: 34px;
+        height: 34px;
+        border: 1px solid #aaa;
+        background: #f3f3f3;
+        border-radius: 6px;
+        cursor: pointer;
+        }
+
+        /* Make label/input rows like the screenshot */
+        #myForm label[for="username"],
+        #myForm label[for="password"],
+        #myForm label[for="email"],
+        #myForm > label:nth-of-type(4){ /* the "Gender:" label in your file */
+        display: grid;
+        grid-template-columns: 1fr 320px;
+        align-items: center;
+        gap: 22px;
+        margin: 18px 0;
+        font-size: 1.15rem;
+        font-weight: 700;
+        }
+
+        /* Inputs aligned on the right */
+        #username, #password, #email{
+        width: 100%;
+        height: 34px;
+        border: 2px solid #cfcfcf;
+        border-radius: 4px;
+        padding: 4px 10px;
+        font-size: 1rem;
+        }
+
+        /* Your gender radio wrapper is the next <div> right after "Gender:" */
+        #myForm > label:nth-of-type(4) + div{
+        display: flex;
+        justify-content: center;
+        gap: 26px;
+        margin: -6px 0 8px;
+        font-size: 1.15rem;
+        }
+
+        /* Checkbox sections centered */
+        #myForm section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 14px 0;
+        font-size: 1.15rem;
+        }
+
+        /* Submit centered and small like screenshot */
+        #myForm button[type="submit"]{
+        padding: 6px 18px;
+        border: 2px solid #bdbdbd;
+        background: #efefef;
+        border-radius: 4px;
+        cursor: pointer;
+        }
+
+        .scripture-row {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 6px;
+            padding: 10px;
+            background: none;
+        }
+
+        .scripture-row img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+
+
+
+
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <div id="formContainer">
+        <div class="hero">
+            <h1>
+              Daily Feed<br />
+              <span>Scripture a Day</span>
+            </h1>
+        </div>
+
+        <h3>Sign Up for Daily Scripture Feed</h3>
+        <form id="myForm">
+            <button type="button" id="closeBtn">X</button>
+            <label for="username">User Name:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label>Gender:</label>
+            <div>
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+            </div>
+
+            <section>
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <label for="newsletter">Subscribe to newsletter</label>
+            </section>
+
+            <section>
+                <input type="checkbox" id="conditions" name="conditions" required>
+                <label for="conditions">I acknowledge the terms and conditions</label>
+            </section>
+
+            <section>
+                <button type="submit">Submit</button>
+            </section>
+        </form>
+        <div class="scripture-row">
+            <img src="images/old_testament.webp" alt="Old Testament">
+            <img src="images/new_testament.webp" alt="New Testament">
+            <img src="images/book_of_mormon.webp" alt="Book of Mormon">
+            <img src="images/doctrine_and_covenants.webp" alt="Doctrine and Covenants">
+            <img src="images/pearl_of_great_price.webp" alt="Pearl of Great Price">
+        </div>
+    </div>
+
+    <div id="output"></div>
+
+    <script>
+        // Here is some Javascript to start looking forward to wdd131
+        document.getElementById("closeBtn").addEventListener("click", function () {
+            document.getElementById("formContainer").style.display = "none";
+         });
+        const form = document.getElementById('myForm');
+        const output = document.getElementById('output');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Stop form from actually submitting
+
+            const formData = new FormData(form);
+            const entries = [];
+
+            for (const [key, value] of formData.entries()) {
+                if (key == "password") {
+                    entries.push(`<strong>${key}</strong>: ${value} (you should probably encrypt the password)`);
+                } else {
+                    entries.push(`<strong>${key}</strong>: ${value}`);
+                }
+            }
+
+            output.innerHTML = `
+            <br>  
+            <h3>Here is the data that would be sent to the server:</h3>
+            <ul>
+                ${entries.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+            `;
+                });
+    </script>
+
+</body>
+
+</html>
